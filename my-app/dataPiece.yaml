@@ -1,0 +1,164 @@
+---
+root(Type=CompilationUnit): 
+    packageDeclaration(Type=PackageDeclaration): 
+        name(Type=Name): 
+            identifier: "resources"
+            qualifier(Type=Name): 
+                identifier: "app"
+                qualifier(Type=Name): 
+                    identifier: "mycompany"
+                    qualifier(Type=Name): 
+                        identifier: "com"
+    types: 
+        - type(Type=ClassOrInterfaceDeclaration): 
+            isInterface: "false"
+            name(Type=SimpleName): 
+                identifier: "SimpleComparison"
+            members: 
+                - member(Type=MethodDeclaration): 
+                    body(Type=BlockStmt): 
+                        statements: 
+                            - statement(Type=ExpressionStmt): 
+                                expression(Type=VariableDeclarationExpr): 
+                                    variables: 
+                                        - variable(Type=VariableDeclarator): 
+                                            initializer(Type=IntegerLiteralExpr): 
+                                                value: "100"
+                                            name(Type=SimpleName): 
+                                                identifier: "num1"
+                                            type(Type=PrimitiveType): 
+                                                type: "INT"
+                            - statement(Type=ExpressionStmt): 
+                                expression(Type=VariableDeclarationExpr): 
+                                    variables: 
+                                        - variable(Type=VariableDeclarator): 
+                                            initializer(Type=IntegerLiteralExpr): 
+                                                value: "200"
+                                            name(Type=SimpleName): 
+                                                identifier: "num2"
+                                            type(Type=PrimitiveType): 
+                                                type: "INT"
+                            - statement(Type=IfStmt): 
+                                condition(Type=BinaryExpr): 
+                                    operator: "NOT_EQUALS"
+                                    left(Type=NameExpr): 
+                                        name(Type=SimpleName): 
+                                            identifier: "num1"
+                                    right(Type=NameExpr): 
+                                        name(Type=SimpleName): 
+                                            identifier: "num2"
+                                thenStmt(Type=BlockStmt): 
+                                    statements: 
+                                        - statement(Type=ExpressionStmt): 
+                                            expression(Type=MethodCallExpr): 
+                                                name(Type=SimpleName): 
+                                                    identifier: "println"
+                                                scope(Type=FieldAccessExpr): 
+                                                    name(Type=SimpleName): 
+                                                        identifier: "out"
+                                                    scope(Type=NameExpr): 
+                                                        name(Type=SimpleName): 
+                                                            identifier: "System"
+                                                arguments: 
+                                                    - argument(Type=StringLiteralExpr): 
+                                                        value: "num1 is equal to num2"
+                            - statement(Type=IfStmt): 
+                                condition(Type=BinaryExpr): 
+                                    operator: "EQUALS"
+                                    left(Type=NameExpr): 
+                                        name(Type=SimpleName): 
+                                            identifier: "num1"
+                                    right(Type=NameExpr): 
+                                        name(Type=SimpleName): 
+                                            identifier: "num2"
+                                elseStmt(Type=BlockStmt): 
+                                    statements: 
+                                        - statement(Type=ExpressionStmt): 
+                                            expression(Type=MethodCallExpr): 
+                                                name(Type=SimpleName): 
+                                                    identifier: "println"
+                                                scope(Type=FieldAccessExpr): 
+                                                    name(Type=SimpleName): 
+                                                        identifier: "out"
+                                                    scope(Type=NameExpr): 
+                                                        name(Type=SimpleName): 
+                                                            identifier: "System"
+                                                arguments: 
+                                                    - argument(Type=StringLiteralExpr): 
+                                                        value: "num1 is equal to num2"
+                                thenStmt(Type=BlockStmt): 
+                                    statements: 
+                                        - statement(Type=ExpressionStmt): 
+                                            expression(Type=MethodCallExpr): 
+                                                name(Type=SimpleName): 
+                                                    identifier: "println"
+                                                scope(Type=FieldAccessExpr): 
+                                                    name(Type=SimpleName): 
+                                                        identifier: "out"
+                                                    scope(Type=NameExpr): 
+                                                        name(Type=SimpleName): 
+                                                            identifier: "System"
+                                                arguments: 
+                                                    - argument(Type=StringLiteralExpr): 
+                                                        value: "num1 is not equal to num2"
+                            - statement(Type=IfStmt): 
+                                condition(Type=BinaryExpr): 
+                                    operator: "GREATER"
+                                    left(Type=NameExpr): 
+                                        name(Type=SimpleName): 
+                                            identifier: "num1"
+                                    right(Type=NameExpr): 
+                                        name(Type=SimpleName): 
+                                            identifier: "num2"
+                                elseStmt(Type=BlockStmt): 
+                                    statements: 
+                                        - statement(Type=ExpressionStmt): 
+                                            expression(Type=MethodCallExpr): 
+                                                name(Type=SimpleName): 
+                                                    identifier: "println"
+                                                scope(Type=FieldAccessExpr): 
+                                                    name(Type=SimpleName): 
+                                                        identifier: "out"
+                                                    scope(Type=NameExpr): 
+                                                        name(Type=SimpleName): 
+                                                            identifier: "System"
+                                                arguments: 
+                                                    - argument(Type=StringLiteralExpr): 
+                                                        value: "num1 is not greater than num2"
+                                thenStmt(Type=BlockStmt): 
+                                    statements: 
+                                        - statement(Type=ExpressionStmt): 
+                                            expression(Type=MethodCallExpr): 
+                                                name(Type=SimpleName): 
+                                                    identifier: "println"
+                                                scope(Type=FieldAccessExpr): 
+                                                    name(Type=SimpleName): 
+                                                        identifier: "out"
+                                                    scope(Type=NameExpr): 
+                                                        name(Type=SimpleName): 
+                                                            identifier: "System"
+                                                arguments: 
+                                                    - argument(Type=StringLiteralExpr): 
+                                                        value: "num1 is greater than num2"
+                    type(Type=VoidType): 
+                    name(Type=SimpleName): 
+                        identifier: "main"
+                    modifiers: 
+                        - modifier(Type=Modifier): 
+                            keyword: "PUBLIC"
+                        - modifier(Type=Modifier): 
+                            keyword: "STATIC"
+                    parameters: 
+                        - parameter(Type=Parameter): 
+                            isVarArgs: "false"
+                            name(Type=SimpleName): 
+                                identifier: "args"
+                            type(Type=ArrayType): 
+                                origin: "TYPE"
+                                componentType(Type=ClassOrInterfaceType): 
+                                    name(Type=SimpleName): 
+                                        identifier: "String"
+            modifiers: 
+                - modifier(Type=Modifier): 
+                    keyword: "PUBLIC"
+...
